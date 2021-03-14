@@ -4,6 +4,120 @@
   
   
   <entry>
+    <title>Arduino IDE的暗黑主题</title>
+    <link href="/2021/03/14/Arduino-Arduino%20IDE%E7%9A%84%E6%9A%97%E9%BB%91%E4%B8%BB%E9%A2%98/"/>
+    <url>/2021/03/14/Arduino-Arduino%20IDE%E7%9A%84%E6%9A%97%E9%BB%91%E4%B8%BB%E9%A2%98/</url>
+    
+    <content type="html"><![CDATA[<h1 id="Arduino-01-Arduino-IDE的暗黑主题"><a href="#Arduino-01-Arduino-IDE的暗黑主题" class="headerlink" title="Arduino-01 Arduino IDE的暗黑主题"></a>Arduino-01 Arduino IDE的暗黑主题</h1><h2 id="下载暗黑主题"><a href="#下载暗黑主题" class="headerlink" title="下载暗黑主题"></a>下载暗黑主题</h2><p><a href="https://github.com/jeffThompson/DarkArduinoTheme">DarkArduinoTheme</a><br>点击Download ZIP下载压缩包并解压.</p><a id="more"></a><p><img src="https://cdn.jsdelivr.net/gh/SilentWolfx/img/img/Arduino-01%2001.png" alt="Arduino-01 01"></p><h2 id="替换主题文件"><a href="#替换主题文件" class="headerlink" title="替换主题文件"></a>替换主题文件</h2><p>打开Arduino\lib文件</p><p>将其中的theme文件替换为下载的theme文件即可.</p><p><img src="https://cdn.jsdelivr.net/gh/SilentWolfx/img/img/Arduino-01%2002.png" alt="Arduino-01 02"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Arduino</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Fritzing 图形化Arduino电路开发软件</title>
+    <link href="/2021/03/14/Arduino-Fritzing%20%E5%9B%BE%E5%BD%A2%E5%8C%96Arduino%E7%94%B5%E8%B7%AF%E5%BC%80%E5%8F%91%E8%BD%AF%E4%BB%B6/"/>
+    <url>/2021/03/14/Arduino-Fritzing%20%E5%9B%BE%E5%BD%A2%E5%8C%96Arduino%E7%94%B5%E8%B7%AF%E5%BC%80%E5%8F%91%E8%BD%AF%E4%BB%B6/</url>
+    
+    <content type="html"><![CDATA[<h1 id="Fritzing-图形化Arduino电路开发软件"><a href="#Fritzing-图形化Arduino电路开发软件" class="headerlink" title="Fritzing 图形化Arduino电路开发软件"></a>Fritzing 图形化Arduino电路开发软件</h1><p><a href="https://fritzing.org/">Fritzing</a>是个电子设计自动化软件.它支持设计师，艺术家，研究人员和爱好者参加从物理原型到进一步实际的产品。还支持用户记录其Arduino和其他电子为基础的原型，与他人分享，在教室里教电子，并建立一家生产印刷电路板的布局.</p><p>正版的Fritzing需要付费，下面提供破解版的Fritzing.<br><a href="https://pan.baidu.com/s/1ju6VocAa_DKGe0lW66WGSQ">Fritzing-百度网盘</a>  提取码:<code>y9l5 </code></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Arduino</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>HC-05蓝牙模块</title>
+    <link href="/2021/03/14/Arduino-HC-05%E8%93%9D%E7%89%99%E6%A8%A1%E5%9D%97/"/>
+    <url>/2021/03/14/Arduino-HC-05%E8%93%9D%E7%89%99%E6%A8%A1%E5%9D%97/</url>
+    
+    <content type="html"><![CDATA[<h1 id="HC-05蓝牙模块"><a href="#HC-05蓝牙模块" class="headerlink" title="HC-05蓝牙模块"></a>HC-05蓝牙模块</h1><h2 id="模块简介"><a href="#模块简介" class="headerlink" title="模块简介"></a>模块简介</h2><p><strong>HC05蓝牙模块</strong>是主从一体的蓝牙串口模块，可连接微控制器及其他设备，允许他们无线通信.</p><h2 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h2><p>VCC: 模块供电需3.3-6.0V<br>GND: 接地<br>TXD: 模块串口发送脚<br>RXD: 模块串口接收脚</p><h2 id="接线"><a href="#接线" class="headerlink" title="接线"></a>接线</h2><p><img src="https://cdn.jsdelivr.net/gh/SilentWolfx/img/img/20210226213734.png" alt="HC-05"></p><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs C"><span class="hljs-keyword">volatile</span> <span class="hljs-keyword">char</span> item; <span class="hljs-comment">//定义变量</span><br><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span></span>&#123;<br>  item = <span class="hljs-number">0</span>; <span class="hljs-comment">//变量赋值为0</span><br>  Serial.begin(<span class="hljs-number">9600</span>); <span class="hljs-comment">//串口比特率为9600</span><br>  pinMode(<span class="hljs-number">13</span>, OUTPUT); <span class="hljs-comment">//定义13号管脚为输出管脚</span><br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">loop</span><span class="hljs-params">()</span></span>&#123;<br>  <span class="hljs-keyword">if</span> (Serial.available() &gt; <span class="hljs-number">0</span>) &#123; <br>    item = Serial.read(); <span class="hljs-comment">//如果串口有读取数据，则将变量赋值为所读取数据</span><br>    <span class="hljs-keyword">switch</span> (item) &#123;<br>     <span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;A&#x27;</span>:<br>      digitalWrite(<span class="hljs-number">13</span>,HIGH); <span class="hljs-comment">//读取数据为A，13号管脚输出高电平</span><br>      <span class="hljs-keyword">break</span>;<br>     <span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;B&#x27;</span>:<br>      digitalWrite(<span class="hljs-number">13</span>,LOW); <span class="hljs-comment">//读取数据为B，13号管脚输出低电平</span><br>      <span class="hljs-keyword">break</span>;<br>    &#125;<br><br>  &#125;<br><br>&#125;<br></code></pre></td></tr></table></figure><p>该代码实现功能为：当蓝牙模块接受到数据A则13号管脚输出高电平，板载灯亮起，接受到数据B则相反.</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Arduino</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>HC-SR04超声波传感器模块</title>
+    <link href="/2021/03/14/Arduino-HC-SR04%E8%B6%85%E5%A3%B0%E6%B3%A2%E4%BC%A0%E6%84%9F%E5%99%A8%E6%A8%A1%E5%9D%97/"/>
+    <url>/2021/03/14/Arduino-HC-SR04%E8%B6%85%E5%A3%B0%E6%B3%A2%E4%BC%A0%E6%84%9F%E5%99%A8%E6%A8%A1%E5%9D%97/</url>
+    
+    <content type="html"><![CDATA[<h1 id="HC-SR04超声波传感器模块"><a href="#HC-SR04超声波传感器模块" class="headerlink" title="HC-SR04超声波传感器模块"></a>HC-SR04超声波传感器模块</h1><h2 id="模块简介"><a href="#模块简介" class="headerlink" title="模块简介"></a>模块简介</h2><p><strong>超声波传感器</strong>是将超声波信号转换成其他能量信号（通常是电信号）的传感器。超声波是振动频率高于20kHz的机械波.它具有频率高、波长短、绕射现象小，特别是方向性好、能够成为射线而定向传播等特点.超声波对液体、固体的穿透本领很大，尤其是在阳光不透明的固体中.超声波碰到杂质或分界面会产生显著反射形成反射回波，碰到活动物体能产生多普勒效应.超声波传感器广泛应用在工业、国防、生物医学等方面.</p><p>量程：2-400cm</p><h2 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h2><p>VCC：模块供电5V</p><p>GND：接地</p><p>Trig：触发信号输入</p><p>Echo：回响信号输入</p><h2 id="接线"><a href="#接线" class="headerlink" title="接线"></a>接线</h2><p><img src="https://cdn.jsdelivr.net/gh/SilentWolfx/img/img/20210226220950.png" alt="接线图源文件"></p><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><code class="hljs c"><br><span class="hljs-keyword">volatile</span> <span class="hljs-keyword">int</span> item; <span class="hljs-comment">//定义变量item</span><br><br><span class="hljs-function"><span class="hljs-keyword">float</span> <span class="hljs-title">checkdistance_8_9</span><span class="hljs-params">()</span> </span>&#123;<br>  digitalWrite(<span class="hljs-number">8</span>, LOW); <span class="hljs-comment">//给Trig发送一个低电平</span><br>  delayMicroseconds(<span class="hljs-number">2</span>); <span class="hljs-comment">//等待2微秒</span><br>  digitalWrite(<span class="hljs-number">8</span>, HIGH); <span class="hljs-comment">//给Trig发送一个高电平</span><br>  delayMicroseconds(<span class="hljs-number">10</span>); <span class="hljs-comment">//等待 10微秒</span><br>  digitalWrite(<span class="hljs-number">8</span>, LOW); <span class="hljs-comment">//给Trig发送一个低电平</span><br>  <span class="hljs-keyword">float</span> distance = pulseIn(<span class="hljs-number">9</span>, HIGH) / <span class="hljs-number">58.00</span>; <span class="hljs-comment">// 读取脉冲的宽度并换算成距离</span><br>  delay(<span class="hljs-number">10</span>);<br>  <span class="hljs-keyword">return</span> distance;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span></span>&#123;<br>  item = <span class="hljs-number">0</span>; <span class="hljs-comment">//变量item赋值为0</span><br>  pinMode(<span class="hljs-number">8</span>, OUTPUT); <span class="hljs-comment">//设置8号管脚为输出</span><br>  pinMode(<span class="hljs-number">9</span>, INPUT); <span class="hljs-comment">//设置9号管脚为输入</span><br>  Serial.begin(<span class="hljs-number">9600</span>); <span class="hljs-comment">//设置串口波特率为9600</span><br>  pinMode(<span class="hljs-number">13</span>, OUTPUT); <span class="hljs-comment">//设置13号管脚为输出</span><br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">loop</span><span class="hljs-params">()</span></span>&#123;<br>  pinMode(<span class="hljs-number">8</span>, OUTPUT); <span class="hljs-comment">//设置8号管脚为输出</span><br>  pinMode(<span class="hljs-number">9</span>, INPUT); <span class="hljs-comment">//设置9号管脚为输入</span><br>  digitalWrite(<span class="hljs-number">8</span>,HIGH);  <span class="hljs-comment">//给Trig发送一个高电平</span><br>  delay(<span class="hljs-number">10</span>); 等待<span class="hljs-number">10</span>毫秒<br>  digitalWrite(<span class="hljs-number">8</span>,LOW);  <span class="hljs-comment">//给Trig发送一个低电平</span><br>  item = checkdistance_8_9(); <span class="hljs-comment">//读取数据</span><br>  Serial.print(item); <span class="hljs-comment">//显示变量item</span><br>  Serial.println(<span class="hljs-string">&quot;cm&quot;</span>); <span class="hljs-comment">//显示单位&quot;cm&quot;</span><br>  <span class="hljs-keyword">if</span> (item &lt; <span class="hljs-number">20</span>) &#123;<br>    digitalWrite(<span class="hljs-number">13</span>,HIGH); <br><br>  &#125; <span class="hljs-keyword">else</span> &#123;<br>    digitalWrite(<span class="hljs-number">13</span>,LOW);<br><br>  &#125;<br>  delay(<span class="hljs-number">500</span>);<br><br>&#125;<br></code></pre></td></tr></table></figure><p>该代码实现功能为：超声波传感器进行测距，若距离小于20cm则板载灯亮起，反则灭掉.</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Arduino</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>L298N电机驱动模块</title>
+    <link href="/2021/03/14/Arduino-L298N%E7%94%B5%E6%9C%BA%E6%A8%A1%E5%9D%97/"/>
+    <url>/2021/03/14/Arduino-L298N%E7%94%B5%E6%9C%BA%E6%A8%A1%E5%9D%97/</url>
+    
+    <content type="html"><![CDATA[<h1 id="L298N模块"><a href="#L298N模块" class="headerlink" title="L298N模块"></a>L298N模块</h1><h2 id="模块简介"><a href="#模块简介" class="headerlink" title="模块简介"></a>模块简介</h2><p><strong>L298N</strong> 是一种双H桥电机驱动芯片.</p><p><strong>L298N电机驱动模块</strong>是一款接受高电压的电机驱动器，可驱动直流电机和步进电机.</p><p><img src="https://cdn.jsdelivr.net/gh/SilentWolfx/img/img/20210201202031.png" alt="L298N"></p><h3 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h3><p>VCC:模块供电需12V.</p><p>GND:连接电源负极.</p><p>5V:模块对外输出5V，当板载5V使能端断开时为模块输入.</p><p>ENA1:控制电机输出A.</p><p>IN1 IN2:逻辑输入.</p><p>OUT1:电机输出.</p><h3 id="逻辑输入"><a href="#逻辑输入" class="headerlink" title="逻辑输入"></a>逻辑输入</h3><table><thead><tr><th>ENA</th><th>IN1</th><th>IN2</th><th>直流电机状态</th></tr></thead><tbody><tr><td>0</td><td>0</td><td>0</td><td>停止</td></tr><tr><td>1</td><td>0</td><td>0</td><td>制动</td></tr><tr><td>1</td><td>0</td><td>1</td><td>正转</td></tr><tr><td>1</td><td>1</td><td>0</td><td>反转</td></tr><tr><td>1</td><td>1</td><td>1</td><td>制动</td></tr></tbody></table><h2 id="接线"><a href="#接线" class="headerlink" title="接线"></a>接线</h2><p><strong>博主使用Arduino UNO板子.</strong></p><h3 id="全速输出"><a href="#全速输出" class="headerlink" title="全速输出"></a>全速输出</h3><p><img src="https://cdn.jsdelivr.net/gh/SilentWolfx/img/img/20210220165640.png" alt="接线图源文件"></p><h3 id="PWN调速输出"><a href="#PWN调速输出" class="headerlink" title="PWN调速输出"></a>PWN调速输出</h3><p><img src="https://cdn.jsdelivr.net/gh/SilentWolfx/img/img/20210220165650.png" alt="0"></p><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><h3 id="直流电机"><a href="#直流电机" class="headerlink" title="直流电机"></a>直流电机</h3><h4 id="全速输出-1"><a href="#全速输出-1" class="headerlink" title="全速输出"></a>全速输出</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-comment">//定义IO</span><br><span class="hljs-keyword">int</span> input1 = <span class="hljs-number">2</span>;<br><span class="hljs-keyword">int</span> input2 = <span class="hljs-number">3</span>;<br> <br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span> </span>&#123;<br><br><span class="hljs-comment">//初始化各IO</span><br>pinMode(input1,OUTPUT);<br>pinMode(input2,OUTPUT);<br>&#125;<br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">loop</span><span class="hljs-params">()</span> </span>&#123;<br>  <span class="hljs-comment">//forward 前进 </span><br>  digitalWrite(input1,HIGH);<br>  digitalWrite(input2,LOW);<br>  delay(<span class="hljs-number">1000</span>);<br> <br> <span class="hljs-comment">//stop 停止</span><br> digitalWrite(input1,LOW);<br> digitalWrite(input2,LOW);   <br> delay(<span class="hljs-number">500</span>);<br> <br>  <br>  <span class="hljs-comment">//back 后退</span><br>  digitalWrite(input1,LOW);<br>  digitalWrite(input2,HIGH);  <br>  delay(<span class="hljs-number">1000</span>);    <br>&#125;<br></code></pre></td></tr></table></figure><h4 id="PWN调速输出-1"><a href="#PWN调速输出-1" class="headerlink" title="PWN调速输出"></a>PWN调速输出</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-keyword">int</span> IN1 = <span class="hljs-number">2</span>;<br><span class="hljs-keyword">int</span> IN2 = <span class="hljs-number">3</span>; <br><span class="hljs-keyword">int</span> ENA = <span class="hljs-number">5</span>; <br><br><span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> time = <span class="hljs-number">1200</span>;<br><span class="hljs-comment">//PWM调速 0-255</span><br><span class="hljs-keyword">int</span> value = <span class="hljs-number">128</span>;<br><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span></span>&#123;<br>    <span class="hljs-comment">//初始化各IO</span><br>    pinMode(IN1, OUTPUT);<br>    pinMode(IN2, OUTPUT);<br><br>    <span class="hljs-comment">//电机方向 逻辑输入</span><br>    digitalWrite(IN1, HIGH);<br>    digitalWrite(IN2, LOW);<br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">loop</span><span class="hljs-params">()</span></span>&#123;<br>    analogWrite(ENA, value);<br>    delay(<span class="hljs-number">500</span>);<br>&#125;<br></code></pre></td></tr></table></figure><h3 id="步进电机"><a href="#步进电机" class="headerlink" title="步进电机"></a>步进电机</h3><p>手上暂未有相关部件……</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Arduino</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>LCD1602模块（带PCF8574T转接板）</title>
+    <link href="/2021/03/14/Arduino-LCD1602%E6%A8%A1%E5%9D%97%EF%BC%88%E5%B8%A6PCF8574T%E8%BD%AC%E6%8E%A5%E6%9D%BF%EF%BC%89/"/>
+    <url>/2021/03/14/Arduino-LCD1602%E6%A8%A1%E5%9D%97%EF%BC%88%E5%B8%A6PCF8574T%E8%BD%AC%E6%8E%A5%E6%9D%BF%EF%BC%89/</url>
+    
+    <content type="html"><![CDATA[<h1 id="LCD1602模块（带PCF8574T转接板）"><a href="#LCD1602模块（带PCF8574T转接板）" class="headerlink" title="LCD1602模块（带PCF8574T转接板）"></a>LCD1602模块（带PCF8574T转接板）</h1><h2 id="模块简介"><a href="#模块简介" class="headerlink" title="模块简介"></a>模块简介</h2><p><strong>LCD1602液晶显示器</strong>是广泛使用的一种字符型液晶显示模块.它是由字符型液晶显示屏（LCD）、控制驱动主电路HD44780及其扩展驱动电路HD44100，以及少量电阻、电容元件和结构件等装配在PCB板上而组成.</p><p>显示容量为16✖2个字符.</p><h2 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h2><p>VCC:  模块供电5V</p><p>GND: 接地</p><p>SDA: 数据接口</p><p>SCL: 控制接口</p><h2 id="接线"><a href="#接线" class="headerlink" title="接线"></a>接线</h2><p><img src="https://cdn.jsdelivr.net/gh/SilentWolfx/img/img/20210226215423.png" alt="0"></p><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs C"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;Wire.h&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;LiquidCrystal_I2C.h&gt; //引用I2C库</span></span><br><br><span class="hljs-function">LiquidCrystal_I2C <span class="hljs-title">mylcd</span><span class="hljs-params">(<span class="hljs-number">0x3f</span>,<span class="hljs-number">16</span>,<span class="hljs-number">2</span>)</span></span>; <span class="hljs-comment">//创捷液晶对象，设备地址为0x3f(一般为0x27或0x3f），16列2行</span><br><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span></span>&#123;<br>  mylcd.init(); <span class="hljs-comment">//初始化液晶屏</span><br>  mylcd.backlight(); <span class="hljs-comment">//打开液晶屏背光</span><br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">loop</span><span class="hljs-params">()</span></span>&#123;<br>  mylcd.setCursor(<span class="hljs-number">5</span><span class="hljs-number">-1</span>, <span class="hljs-number">2</span><span class="hljs-number">-1</span>); <span class="hljs-comment">//设置光标位置为第2行第5列</span><br>  mylcd.print(<span class="hljs-string">&quot;1&quot;</span>); <span class="hljs-comment">//输出字符 1</span><br>  delay(<span class="hljs-number">1000</span>); <span class="hljs-comment">//延时1秒</span><br>  mylcd.clear(); <span class="hljs-comment">//清屏</span><br>  mylcd.setCursor(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>); <span class="hljs-comment">//设置光标位置为第1行</span><br>  mylcd.print(<span class="hljs-string">&quot;2&quot;</span>); <span class="hljs-comment">//输出字符 2</span><br>  mylcd.setCursor(<span class="hljs-number">0</span>, <span class="hljs-number">1</span>); <span class="hljs-comment">//设置光标位置为第2行</span><br>  mylcd.print(<span class="hljs-string">&quot;3&quot;</span>); <span class="hljs-comment">//输出字符 3</span><br>  delay(<span class="hljs-number">2000</span>); <span class="hljs-comment">//延时2秒</span><br>  mylcd.clear(); <span class="hljs-comment">//清屏</span><br><br>&#125;<br></code></pre></td></tr></table></figure><p>该代码实现功能为：LCD1602液晶屏在第二行第五列显示“1”，1秒后清屏并在第一行显示”2”，在第二行显示”3”，2秒后清屏.</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Arduino</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>5月社团展示临时制作计划</title>
     <link href="/2021/03/07/%E7%A4%BE%E5%9B%A2%E4%BB%BB%E5%8A%A1-5%E6%9C%88%E7%A4%BE%E5%9B%A2%E5%B1%95%E7%A4%BA%E4%B8%B4%E6%97%B6%E5%88%B6%E4%BD%9C%E8%AE%A1%E5%88%92/"/>
     <url>/2021/03/07/%E7%A4%BE%E5%9B%A2%E4%BB%BB%E5%8A%A1-5%E6%9C%88%E7%A4%BE%E5%9B%A2%E5%B1%95%E7%A4%BA%E4%B8%B4%E6%97%B6%E5%88%B6%E4%BD%9C%E8%AE%A1%E5%88%92/</url>
@@ -609,22 +723,22 @@
   
   
   <entry>
-    <title>about</title>
+    <title>留言</title>
     <link href="/"/>
     <url>/</url>
     
-    <content type="html"><![CDATA[<h1 id="这里是佛山四中科技社的官网！"><a href="#这里是佛山四中科技社的官网！" class="headerlink" title="这里是佛山四中科技社的官网！"></a>这里是佛山四中科技社的官网！</h1><p>佛山四中科技社成立于2014年，隶属于佛山市第四中学，是面向全校学生的兴趣类社团.<br>社团自成立以来，在学校领导和老师的支持、关怀下蓬勃发展，担当着校内科技性社团领航者的角色。在社团指导老师们的带领下，长期开展各种科技创新活动，在各项比赛中取得了相当优异的成绩.</p><hr><h2 id="基本情况（2020-2021）"><a href="#基本情况（2020-2021）" class="headerlink" title="基本情况（2020-2021）"></a>基本情况（2020-2021）</h2><h3 id="活动时间"><a href="#活动时间" class="headerlink" title="活动时间"></a>活动时间</h3><p>每周三下午第八九节社团课.</p><h3 id="活动地点"><a href="#活动地点" class="headerlink" title="活动地点"></a>活动地点</h3><p>劳技室&amp;科技活动室</p><h3 id="指导老师"><a href="#指导老师" class="headerlink" title="指导老师"></a>指导老师</h3><p>冯俊 徐雨洋 冯奕发</p><h3 id="高三元老"><a href="#高三元老" class="headerlink" title="高三元老"></a>高三元老</h3><p>宋沁恬 胡炜彬 何倬铭 关俊杰 陈全贤</p><h3 id="现负责人"><a href="#现负责人" class="headerlink" title="现负责人"></a>现负责人</h3><p>杨嘉铭 黎建辉 杨世贤 郑淳宣 邓凯欣</p><h3 id="社团成员"><a href="#社团成员" class="headerlink" title="社团成员"></a>社团成员</h3><p>罗宇洋 韦晴思 谭昊鹏 梁翀 黎鸿滔</p><p>陈炜浚 陈智轩 简文海 陈泓天 柯锡铭</p><p>陆焯禧 蒋声威 白欣蔓 刘璐华 许泽豪 朱子豪</p><h3 id="退役成员"><a href="#退役成员" class="headerlink" title="退役成员"></a>退役成员</h3><p>陈德风 罗钟养 袁永堃 叶国治 ……</p><p>网站正在努力维护中……</p>]]></content>
+    <content type="html"><![CDATA[<p><a href="https://f4kjs.github.io/2021/02/17/%E7%95%99%E8%A8%80%E6%9D%BF/"><strong>戳这里进入留言板！</strong></a></p>]]></content>
     
   </entry>
   
   
   
   <entry>
-    <title>留言</title>
+    <title>about</title>
     <link href="/"/>
     <url>/</url>
     
-    <content type="html"><![CDATA[<p><a href="https://f4kjs.github.io/2021/02/17/%E7%95%99%E8%A8%80%E6%9D%BF/"><strong>戳这里进入留言板！</strong></a></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="这里是佛山四中科技社的官网！"><a href="#这里是佛山四中科技社的官网！" class="headerlink" title="这里是佛山四中科技社的官网！"></a>这里是佛山四中科技社的官网！</h1><p>佛山四中科技社成立于2014年，隶属于佛山市第四中学，是面向全校学生的兴趣类社团.<br>社团自成立以来，在学校领导和老师的支持、关怀下蓬勃发展，担当着校内科技性社团领航者的角色。在社团指导老师们的带领下，长期开展各种科技创新活动，在各项比赛中取得了相当优异的成绩.</p><hr><h2 id="基本情况（2020-2021）"><a href="#基本情况（2020-2021）" class="headerlink" title="基本情况（2020-2021）"></a>基本情况（2020-2021）</h2><h3 id="活动时间"><a href="#活动时间" class="headerlink" title="活动时间"></a>活动时间</h3><p>每周三下午第八九节社团课.</p><h3 id="活动地点"><a href="#活动地点" class="headerlink" title="活动地点"></a>活动地点</h3><p>劳技室&amp;科技活动室</p><h3 id="指导老师"><a href="#指导老师" class="headerlink" title="指导老师"></a>指导老师</h3><p>冯俊 徐雨洋 冯奕发</p><h3 id="高三元老"><a href="#高三元老" class="headerlink" title="高三元老"></a>高三元老</h3><p>宋沁恬 胡炜彬 何倬铭 关俊杰 陈全贤</p><h3 id="现负责人"><a href="#现负责人" class="headerlink" title="现负责人"></a>现负责人</h3><p>杨嘉铭 黎建辉 杨世贤 郑淳宣 邓凯欣</p><h3 id="社团成员"><a href="#社团成员" class="headerlink" title="社团成员"></a>社团成员</h3><p>罗宇洋 韦晴思 谭昊鹏 梁翀 黎鸿滔</p><p>陈炜浚 陈智轩 简文海 陈泓天 柯锡铭</p><p>陆焯禧 蒋声威 白欣蔓 刘璐华 许泽豪 朱子豪</p><h3 id="退役成员"><a href="#退役成员" class="headerlink" title="退役成员"></a>退役成员</h3><p>陈德风 罗钟养 袁永堃 叶国治 ……</p><p>网站正在努力维护中……</p>]]></content>
     
   </entry>
   
